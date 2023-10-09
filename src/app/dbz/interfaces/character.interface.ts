@@ -1,5 +1,5 @@
 export interface character {
 
   name: string;
-  power: number;
+  power: string;
 }

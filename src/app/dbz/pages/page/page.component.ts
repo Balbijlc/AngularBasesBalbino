@@ -11,20 +11,26 @@ export class PageComponent {
   public characters: character[] = [{
 
     name:'Krillin',
-    power: 1000,
+    power: '1000',
   },
    {
     name: 'Goku',
-    power: 9500
+    power: '9500'
    },
    {
     name: 'Vegeta',
-    power: 8500
+    power: '8500'
    }
 
 ];
 
+   onDelet ( index: number) {
+
+    this.characters.splice(index,1)
+   }
+
    onNewCharacter( character: character ): void {
+
     this.characters.push(character);
 
  console.log('MainPage');

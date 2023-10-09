@@ -3,13 +3,13 @@
 <div class="row">
 
   <div class="col">
-    <app-dbz-list [characterList]="characters" ></app-dbz-list>
+    <app-dbz-list (Delet)="onDelet($event)" [characterList]="characters" ></app-dbz-list>
   </div>
 
 
   <div class="col">
     <app-dbz-caracter (onNewCharacter)="onNewCharacter($event)" > </app-dbz-caracter>
-
+<!-- Parentesis es para escuchar eventos y llaves cuadradas atributos -->
   </div>
 
 
