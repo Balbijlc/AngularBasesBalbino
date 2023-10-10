@@ -17,14 +17,19 @@ export class ListComponent {
   }]
 
     @Output ()
-   public Delet: EventEmitter<number> = new EventEmitter();
-
-  onDeleteCharacter(index:number):void {
+   public Delet: EventEmitter<string> = new EventEmitter();
 
 
-   this.Delet.emit( index )
-    console.log(index)
+
+  onDeleteCharacter(id?:string):void {
+
+  if ( !id) return;
+
+   this.Delet.emit( id )
+    console.log()
   }
+
+  
 
 
 }
